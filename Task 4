@@ -1,0 +1,41 @@
+#Task 4
+#1
+
+strings =['helloworld', 'my', 'x']
+
+for string in strings:
+    if len(string) <= 1:
+        print('Empty String')
+    elif len(string) <= 3:
+        print(string[0:2] * 2)
+    else:
+        print(string[0:2] + string[-1:-3:-1])
+
+
+#2
+number = '1234567890'
+
+if number.isdigit():
+    if len(number) == 10:
+        print('Правильний формат: ', number)
+else:
+    print('Номер введено неправильно')
+
+
+#3
+question = '6 * 7'
+answer = input('Скілька буде: ' + question + '\n = ')
+if answer.isdigit():
+    if int(answer) == 56:
+        print('Відповідь вірна!')
+    else:
+        print("Невірно")
+else:
+    print('Відповідь не є число!')
+
+#4
+name = "sergey"
+name1 = input("Ваше ім'я: ")
+if name1.lower() == name.lower():
+    print('True')
+else: print('False')
