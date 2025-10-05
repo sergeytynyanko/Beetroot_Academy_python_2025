@@ -1,0 +1,35 @@
+# Завдання 1
+
+
+number = input('Введіть число від 1 до 10 = ')
+
+computer = random.randint(1, 10)
+if number.isdigit():
+
+    if computer == int(number):
+        print('Вгадали')
+    else:
+        print('Не вгадали, число =', computer)
+else:
+    print('Ви ввели не число від 1 до 10 ')
+    
+# Завдання 2
+
+name = input("Name - ")
+age = input("Age = ")
+age1 = int(age) + 1
+print(f"Hello {name}, on your next birthday you’ll be {age1} years")
+
+# Завдання 3
+
+import random
+
+string = input('Введіть слово: ')
+len_str = len(string)
+
+for i in range(0, 5):
+
+    for j in range(0, len_str):
+        print(string[random.randint(0, len_str-1)], end='')
+    print(end=', ')
+print()
