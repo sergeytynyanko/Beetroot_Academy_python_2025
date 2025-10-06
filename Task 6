@@ -1,0 +1,52 @@
+# урок 6
+import random
+
+# Завдання 1
+# Write a Python program to get the largest number from a list of random numbers with the length of 10
+
+list10 = [random.randint(1, 100) for i in range(10)]
+print(list10)
+inx = 0
+list_max = list10[0]
+while inx < len(list10)-1:
+    list1 = list10[inx+1]
+    if list_max < list1:
+        list_max = list10[inx+1]
+    inx += 1
+print(list_max)
+
+
+    
+# Завдання 2
+# Generate 2 lists with the length of 10 with random integers from 1 to 10, 
+  and make a third list containing the common integers between the 2 initial lists without any duplicates.
+
+list1 = [random.randint(1, 10) for i in range(10)]
+list2 = [random.randint(1, 10) for i in range(10)]
+list3 = []
+inx = 0
+while inx < len(list1):
+    elem = list1[inx]
+    if elem in list2 and elem not in list3:
+        list3.append(elem)
+    inx += 1
+print(list1)
+print(list2)
+print(list3)
+
+
+# Завдання 3
+# Make a list that contains all integers from 1 to 100, 
+then find all integers from the list that are divisible by 7 but not a multiple of 5, 
+and store them in a separate list. Finally, print the list.
+
+list100 = list(range(1, 101))
+list4 = []
+inx = 0
+while inx < len(list100):
+    elem1 = list100[inx]
+    if elem1 % 7 == 0: 
+        if elem1 % 5 != 0:
+            list4.append(elem1)
+    inx += 1
+print('list4-', list4)
